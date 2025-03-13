@@ -1,16 +1,26 @@
-# Air-Canvas-For-Artist
-Computer vision project implemented with OpenCV with Machine learning using the Mediapipe
+# Air Canvas for Artists
 
-Ever wanted to draw your imagination by just waiving your finger in air. In this post we will learn to build an Air Canvas which can draw anything on it by just motion of our hands and noticing the landmark on the hand knuckels. A very beautiful project for resume of machine learning people.
-We will be using the computer vision techniques of OpenCV to build this project. The preffered language is python due to its exhaustive libraries and easy to use syntax but understanding the basics it can be implemented in any OpenCV supported language.
+## Introduction
+The **Air Canvas for Artists** project leverages **computer vision** and **machine learning** to enable users to draw in the air using their fingers. Using **OpenCV** and **Mediapipe**, this project detects hand landmarks and tracks finger movements to create digital drawings. It is an innovative and interactive project, making it a valuable addition to the resume of **machine learning** and **computer vision** enthusiasts.
 
-# Algorithm
+This project is implemented in **Python** due to its extensive libraries and easy-to-use syntax, but it can be adapted to any language supported by OpenCV.
 
-1. Start reading the frames and convert the captured frames to HSV colour space.(Easy for colour detection)
-2. Prepare the canvas frame and put the respective ink buttons on it.
-3. Adjust the values of teh mediapipe intilization to detect one hand only.
-4. Detect teh landmarks by passing the RGB frame to the mediapipe hand detector
-5. Detect the landmarks, find the forefinger coordinates and keep storing them in the array for successive frames .(Arrays for drawing points on canvas)
-6. Finally draw the points stored in array on the frames and canvas .
+## Algorithm
+1. **Frame Capture & Processing**: Read frames from the webcam and convert them to **HSV color space** for better color detection.
+2. **Canvas Setup**: Prepare a drawing canvas and add ink selection buttons.
+3. **Hand Detection Initialization**: Configure **Mediapipe** to detect a single hand.
+4. **Landmark Detection**: Process frames through the **Mediapipe Hand Detector** to identify hand landmarks.
+5. **Track Finger Movement**: Extract the coordinates of the forefinger and store them in an array for successive frames.
+6. **Drawing on Canvas**: Use the stored points to draw on the screen, allowing users to sketch in the air.
 
-Requirements: python3 , numpy , opencv, mediapipe installed on your system.
+## Features
+- **Real-Time Hand Tracking**: Uses **Mediapipe** to detect and track hand movements.
+- **Air Drawing**: Allows drawing in the air using finger movements.
+- **Multiple Ink Colors**: Switch between different colors using UI buttons.
+- **Canvas Erase Option**: Clear the screen with a predefined gesture.
+- **Efficient Performance**: Optimized for real-time execution with minimal latency.
+
+## Future Enhancements
+- Adding gesture-based undo and redo functionality.
+- Implementing shape recognition for drawing predefined shapes.
+- Enhancing UI with additional customization features.
